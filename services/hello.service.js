@@ -1,6 +1,8 @@
 module.exports = {
-    name: "hello",
-    actions: {
-        
+  name: "hello",
+  actions: {
+    hello() {
+      return "Hello, ";
     }
+  }
 }

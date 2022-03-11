@@ -19,27 +19,14 @@ services:
     networks:
       - internal
 
-  greeter:
+  hello:
     build:
       context: .
     image: moleculer-demo
     env_file: docker-compose.env
     environment:
-      SERVICES: greeter
+      SERVICES: hello
     depends_on:
-      - zookeeper
-    networks:
-      - internal
-
-  products:
-    build:
-      context: .
-    image: moleculer-demo
-    env_file: docker-compose.env
-    environment:
-      SERVICES: products
-    depends_on:
-      - mongo
       - zookeeper
     networks:
       - internal

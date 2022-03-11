@@ -18,6 +18,14 @@
         }
       },
       "version": "main"
+    },
+    {
+      "source": {
+        "local": {
+          "directory": "environments/sandbox"
+        }
+      },
+      "version": ""
     }
   ],
   "legacyImports": true
