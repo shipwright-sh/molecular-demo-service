@@ -1,6 +1,6 @@
 {
   "name": "moleculer-demo",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "My Moleculer-based microservices project",
   "scripts": {
     "dev": "moleculer-runner --repl --hot services/**/*.service.js",
@@ -13,6 +13,11 @@
     "dc:logs": "docker-compose logs -f",
     "dc:down": "docker-compose down"
   },
+  "keywords": [
+    "microservices",
+    "moleculer"
+  ],
+  "author": "",
   "devDependencies": {
     "eslint": "^7.32.0",
     "jest": "^27.1.0",
@@ -21,8 +26,6 @@
   },
   "dependencies": {
     "moleculer-web": "^0.10.2",
-    "moleculer-db": "^0.8.15",
-    "moleculer-db-adapter-mongo": "^0.4.13",
     "kafka-node": "^5.0.0",
     "moleculer": "^0.14.16"
   },

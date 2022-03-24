@@ -1,10 +1,8 @@
-(import "api/api.libsonnet") +
+(import "greeter/api.libsonnet") +
 {
-  api+: {
-    deployment+: {
-      spec+: {
-        replicas: 3
-      }
+  greeter_deployment+: {
+    spec+: {
+      replicas: 3
     }
   }
 }

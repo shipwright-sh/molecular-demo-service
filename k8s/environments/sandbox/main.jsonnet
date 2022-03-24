@@ -1,1 +1,1 @@
-(import "api/api.libsonnet")
+(import "greeter/api.libsonnet")

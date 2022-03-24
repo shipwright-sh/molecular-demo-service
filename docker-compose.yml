@@ -19,22 +19,15 @@ services:
     networks:
       - internal
 
-  hello:
+  greeter:
     build:
       context: .
     image: moleculer-demo
     env_file: docker-compose.env
     environment:
-      SERVICES: hello
+      SERVICES: greeter
     depends_on:
       - zookeeper
-    networks:
-      - internal
-
-  mongo:
-    image: mongo:4
-    volumes:
-      - data:/data/db
     networks:
       - internal
 
@@ -59,7 +52,8 @@ services:
   traefik:
     image: traefik:v2.1
     command:
-      - "--api.insecure=true" # Don't do that in production!
+      - "--log.level=DEBUG"
+      - "--api.insecure=true"
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
     ports:
